@@ -10,12 +10,12 @@ class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     val id: Long = 0
-    var nome: String = ""
-    var email: String = ""
-    var senha: String = ""
+    val nome: String = ""
+    val email: String = ""
+    val senha: String = ""
     val dataCriacao: LocalDate = LocalDate.now()
-    var token: String = ""
+    val token: String = ""
 
     @OneToMany(fetch = FetchType.LAZY, cascade = [CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE])
-    var telefones: List<Telefone>? = null
+    val telefones: List<Telefone>? = null
 }
