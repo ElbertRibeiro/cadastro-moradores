@@ -6,8 +6,8 @@ import javax.persistence.*
 class Telefone {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    var id: Long? = null
+    var id: Long = 0
 
     @Column(nullable = false)
-    val number: String = ""
+    var number: String? = null
 }
