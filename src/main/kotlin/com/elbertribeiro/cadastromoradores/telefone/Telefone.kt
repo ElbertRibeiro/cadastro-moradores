@@ -1,6 +1,13 @@
 package com.elbertribeiro.cadastromoradores.telefone
 
+import javax.persistence.*
+
+@Entity
 class Telefone {
-    var ddd: String = ""
-    var numero: String = ""
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    var id: Long? = null
+
+    @Column(nullable = false)
+    val number: String = ""
 }
