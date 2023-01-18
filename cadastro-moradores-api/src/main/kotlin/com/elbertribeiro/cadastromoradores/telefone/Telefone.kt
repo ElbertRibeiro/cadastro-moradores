@@ -9,3 +9,7 @@ class Telefone {
     val id: Long = 0
     val numero: String = ""
 }
+
+fun Telefone.toTelefoneDto() = TelefoneDto(
+    numero = numero
+)
