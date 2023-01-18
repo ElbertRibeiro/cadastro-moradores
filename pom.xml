@@ -12,5 +12,6 @@
     </properties>
     <modules>
         <module>${project.artifactId}-api</module>
+        <module>${project.artifactId}-frontend</module>
     </modules>
 </project>
