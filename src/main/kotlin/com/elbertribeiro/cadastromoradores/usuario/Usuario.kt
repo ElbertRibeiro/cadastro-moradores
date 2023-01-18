@@ -3,7 +3,6 @@ package com.elbertribeiro.cadastromoradores.usuario
 import com.elbertribeiro.cadastromoradores.telefone.Telefone
 import java.time.LocalDate
 import javax.persistence.*
-import javax.validation.constraints.Email
 
 @Entity
 class Usuario {
