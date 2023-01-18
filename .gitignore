@@ -1,3 +1,2 @@
 .idea
-/cadastro-moradores.iml
-/cadastro-moradores-frontend/cadastro-moradores-frontend.iml
+**/**.iml
