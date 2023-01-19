@@ -10,13 +10,13 @@ import java.util.stream.Collectors
 
 @RestController
 @RequestMapping("/api/v1/usuario")
-class UsuarioRecurso(val usuarioServicoImp: UsuarioServicoImp) {
+class UsuarioRecurso(val usuarioServico: UsuarioServico) {
 
     @Operation(summary = "Listar todos usuarios")
     @ApiResponse(responseCode = "200", description = "Usuarios retornados com sucesso")
     @GetMapping
     fun listaUsuarios(): ResponseEntity<List<UsuarioDto>> {
-        return ResponseEntity.ok(usuarioServicoImp.buscarListaUsuarios().stream().map { usuario -> usuario.toUsuarioDto() }
+        return ResponseEntity.ok(usuarioServico.buscarListaUsuarios().stream().map { usuario -> usuario.toUsuarioDto() }
             .collect(Collectors.toList()))
     }
 
@@ -24,6 +24,6 @@ class UsuarioRecurso(val usuarioServicoImp: UsuarioServicoImp) {
     @ApiResponse(responseCode = "201", description = "Retorna ID do usuario criado")
     @PostMapping
     fun salvaUsuario(@RequestBody usuario: Usuario): ResponseEntity<MessageResponseDto> {
-        return ResponseEntity.status(HttpStatus.CREATED).body(usuarioServicoImp.salvarUsuario(usuario))
+        return ResponseEntity.status(HttpStatus.CREATED).body(usuarioServico.salvarUsuario(usuario))
     }
 }
