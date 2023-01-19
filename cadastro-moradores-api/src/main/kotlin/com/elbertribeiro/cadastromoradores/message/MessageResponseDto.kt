@@ -1,5 +1,5 @@
 package com.elbertribeiro.cadastromoradores.message
 
-class MessageResponseDTO {
+class MessageResponseDto {
     var message: String? = null
 }

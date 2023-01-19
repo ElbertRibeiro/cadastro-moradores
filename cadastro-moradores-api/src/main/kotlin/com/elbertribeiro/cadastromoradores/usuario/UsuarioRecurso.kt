@@ -1,6 +1,6 @@
 package com.elbertribeiro.cadastromoradores.usuario
 
-import com.elbertribeiro.cadastromoradores.message.MessageResponseDTO
+import com.elbertribeiro.cadastromoradores.message.MessageResponseDto
 import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.responses.ApiResponse
 import org.springframework.http.HttpStatus
@@ -23,7 +23,7 @@ class UsuarioRecurso(val usuarioServicoImp: UsuarioServicoImp) {
     @Operation(summary = "Salvar usuario")
     @ApiResponse(responseCode = "201", description = "Retorna ID do usuario criado")
     @PostMapping
-    fun salvaUsuario(@RequestBody usuario: Usuario): ResponseEntity<MessageResponseDTO> {
+    fun salvaUsuario(@RequestBody usuario: Usuario): ResponseEntity<MessageResponseDto> {
         return ResponseEntity.status(HttpStatus.CREATED).body(usuarioServicoImp.salvarUsuario(usuario))
     }
 }
