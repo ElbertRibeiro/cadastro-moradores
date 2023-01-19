@@ -1,6 +1,6 @@
 package com.elbertribeiro.cadastromoradores.usuario
 
-import com.elbertribeiro.cadastromoradores.root.RootDTO
+import com.elbertribeiro.cadastromoradores.home.HomeDto
 import com.elbertribeiro.cadastromoradores.telefone.TelefoneDto
 import org.springframework.hateoas.RepresentationModel
 import java.io.Serializable
@@ -14,4 +14,4 @@ data class UsuarioDto(
     val senha: String = "",
     val token: String = "",
     val telefones: MutableList<TelefoneDto>? = null
-) : Serializable, RepresentationModel<RootDTO?>()
+) : Serializable, RepresentationModel<HomeDto?>()

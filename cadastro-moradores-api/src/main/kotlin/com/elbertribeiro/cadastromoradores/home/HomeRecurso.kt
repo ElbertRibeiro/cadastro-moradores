@@ -1,4 +1,4 @@
-package com.elbertribeiro.cadastromoradores.root
+package com.elbertribeiro.cadastromoradores.home
 
 import com.elbertribeiro.cadastromoradores.usuario.UsuarioRecurso
 import io.swagger.v3.oas.annotations.Operation
@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class RootRecurso {
+class HomeRecurso {
     @Operation(summary = "Listar todas as collections")
     @GetMapping
-    fun getEntryPoint(): ResponseEntity<RootDTO> {
-        val rootEntryPoint = RootDTO()
+    fun getEntryPoint(): ResponseEntity<HomeDto> {
+        val rootEntryPoint = HomeDto()
             .add(
                 linkTo(
                     methodOn(UsuarioRecurso::class.java)
