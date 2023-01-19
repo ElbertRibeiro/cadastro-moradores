@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service
 
 @Service
 class UsuarioServicoImp(val usuarioRepositorio: UsuarioRepositorio): UsuarioServico {
-    override fun buscarListaUsuarios(): List<Usuario> {
+    override fun buscarListaUsuarios(): MutableList<Usuario> {
         return usuarioRepositorio.findAll()
     }
 

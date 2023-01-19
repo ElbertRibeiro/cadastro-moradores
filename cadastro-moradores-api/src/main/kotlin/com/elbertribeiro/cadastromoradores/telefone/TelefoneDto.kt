@@ -5,4 +5,4 @@ import java.io.Serializable
 /**
  * A DTO for the {@link com.elbertribeiro.cadastromoradores.telefone.Telefone} entity
  */
-data class TelefoneDto(val id: Long = 0, val numero: String = "") : Serializable
+data class TelefoneDto(val numero: String = "") : Serializable
