@@ -13,5 +13,6 @@
     <modules>
         <module>${project.artifactId}-api</module>
         <module>${project.artifactId}-frontend</module>
+        <module>${project.artifactId}-mobile</module>
     </modules>
 </project>
