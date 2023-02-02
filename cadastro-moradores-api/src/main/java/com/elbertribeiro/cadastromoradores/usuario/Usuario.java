@@ -1,10 +1,7 @@
 package com.elbertribeiro.cadastromoradores.usuario;
 
-import com.elbertribeiro.cadastromoradores.telefone.Telefone;
-
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.List;
 
 @Entity
 public class Usuario {
@@ -16,9 +13,7 @@ public class Usuario {
     private String senha;
     private LocalDate dataCriacao = LocalDate.now();
     private String token;
-
-    @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
-    private List<Telefone> telefones;
+    private String telefone;
 
     public Long getId() {
         return id;
@@ -68,11 +63,11 @@ public class Usuario {
         this.token = token;
     }
 
-    public List<Telefone> getTelefones() {
-        return telefones;
+    public String getTelefone() {
+        return telefone;
     }
 
-    public void setTelefones(List<Telefone> telefones) {
-        this.telefones = telefones;
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 }

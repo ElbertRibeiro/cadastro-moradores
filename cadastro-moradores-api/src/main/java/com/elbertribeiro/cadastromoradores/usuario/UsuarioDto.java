@@ -1,82 +1,64 @@
 package com.elbertribeiro.cadastromoradores.usuario;
 
-import com.elbertribeiro.cadastromoradores.telefone.TelefoneDto;
-
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.List;
-import java.util.Objects;
 
 /**
  * A DTO for the {@link Usuario} entity
  */
 public class UsuarioDto implements Serializable {
-    private final String nome;
-    private final String email;
-    private final String senha;
-    private final LocalDate dataCriacao;
-    private final String token;
-    private final List<TelefoneDto> telefones;
-
-    public UsuarioDto(String nome, String email, String senha, LocalDate dataCriacao, String token, List<TelefoneDto> telefones) {
-        this.nome = nome;
-        this.email = email;
-        this.senha = senha;
-        this.dataCriacao = dataCriacao;
-        this.token = token;
-        this.telefones = telefones;
-    }
+    private String nome;
+    private String email;
+    private String senha;
+    private LocalDate dataCriacao;
+    private String token;
+    private String telefone;
 
     public String getNome() {
         return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getEmail() {
         return email;
     }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public String getSenha() {
         return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
     public LocalDate getDataCriacao() {
         return dataCriacao;
     }
 
+    public void setDataCriacao(LocalDate dataCriacao) {
+        this.dataCriacao = dataCriacao;
+    }
+
     public String getToken() {
         return token;
     }
 
-    public List<TelefoneDto> getTelefones() {
-        return telefones;
+    public void setToken(String token) {
+        this.token = token;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        UsuarioDto entity = (UsuarioDto) o;
-        return Objects.equals(this.nome, entity.nome) &&
-                Objects.equals(this.email, entity.email) &&
-                Objects.equals(this.senha, entity.senha) &&
-                Objects.equals(this.dataCriacao, entity.dataCriacao) &&
-                Objects.equals(this.token, entity.token) &&
-                Objects.equals(this.telefones, entity.telefones);
+    public String getTelefone() {
+        return telefone;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(nome, email, senha, dataCriacao, token, telefones);
-    }
-
-    @Override
-    public String toString() {
-        return getClass().getSimpleName() + "(" +
-                "nome = " + nome + ", " +
-                "email = " + email + ", " +
-                "senha = " + senha + ", " +
-                "dataCriacao = " + dataCriacao + ", " +
-                "token = " + token + ", " +
-                "telefones = " + telefones + ")";
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 }
